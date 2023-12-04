@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VoterComponent } from './1-voter/voter.component';
 import { GreeterComponent } from './greeter/greeter.component';
+import { TodosComponent } from './todos/todos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VoterComponent,
-    GreeterComponent
+    GreeterComponent,
+    TodosComponent
   ],
   imports: [
     BrowserModule,
