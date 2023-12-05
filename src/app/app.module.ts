@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { VoterComponent } from './1-voter/voter.component';
 import { GreeterComponent } from './greeter/greeter.component';
 import { TodosComponent } from './todos/todos.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VoterComponent,
     GreeterComponent,
-    TodosComponent
+    TodosComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
