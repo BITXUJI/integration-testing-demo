@@ -5,7 +5,7 @@ import { UsersComponent } from './users/users.component';
 import { TodosComponent } from './todos/todos.component';
 import { HomeComponent } from './home/home.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: 'users/:id', component: UserDetailsComponent },
   { path: 'users', component: UsersComponent },
   { path: 'todos', component: TodosComponent },
