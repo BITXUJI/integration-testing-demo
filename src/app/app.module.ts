@@ -7,6 +7,8 @@ import { VoterComponent } from './1-voter/voter.component';
 import { GreeterComponent } from './greeter/greeter.component';
 import { TodosComponent } from './todos/todos.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { UsersComponent } from './users/users.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     VoterComponent,
     GreeterComponent,
     TodosComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    UsersComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
