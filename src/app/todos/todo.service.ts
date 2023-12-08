@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { firstValueFrom } from 'rxjs';
 
 @Injectable()
 export class TodoService {
@@ -15,7 +16,7 @@ export class TodoService {
   }
 
   getTodosPromise() {
-    return this.http.get('...');
+    return firstValueFrom(this.http.get<any[]>('...'));
   }
 
   delete(id: number) {
