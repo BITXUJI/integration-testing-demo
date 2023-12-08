@@ -2,7 +2,8 @@ import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { By } from '@angular/platform-browser';
-import { RouterLinkWithHref, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
+import { NavComponent } from './nav/nav.component';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
@@ -11,7 +12,8 @@ describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [AppComponent]
+      declarations: [AppComponent, NavComponent],
+      //schemas:[NO_ERRORS_SCHEMA]
     });
 
     fixture = TestBed.createComponent(AppComponent);
@@ -30,33 +32,5 @@ describe('AppComponent', () => {
   it('should have a router outlet', () => {
     const routerOutlet = fixture.debugElement.query(By.directive(RouterOutlet));
     expect(routerOutlet).not.toBeNull();
-  });
-
-  it('should have a link to todo page', () => {
-    //W1
-    // const aLink = fixture.debugElement.query(By.css('a'));
-    // expect(aLink.properties['href']).toContain('/todos');
-
-
-    //W2 
-    // const routerLink = fixture.debugElement.query(By.directive(RouterLinkWithHref));
-    // expect(routerLink.properties['href']).toContain('/todos');
-
-    //W3 recommended
-    const routerLinks = fixture.debugElement.queryAll(By.directive(RouterLinkWithHref));
-
-    const index = routerLinks.findIndex(de => (de.properties['href']).includes('/todos'));
-    // const index = routerLinks.findIndex(de => de.attributes['href'] === '/todos');
-
-    expect(index).toBeGreaterThan(-1);
-
-    //W4
-    // let anchorElement = fixture.nativeElement.querySelector('a');
-    // expect(anchorElement.getAttribute('href')).toEqual('/todos');
-
-    //W5
-    // let anchorElement = fixture.nativeElement.querySelector('a');
-    // expect(anchorElement.getAttribute('ng-reflect-router-link')).toEqual('todos');
-
   });
 });
